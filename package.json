@@ -8,10 +8,9 @@
     "start": "npm run build && node dist/server.js",
     "start:dev": "babel-node src/server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "test:integration": "NODE_ENV=test mocha --config=test/integration/.mocharc.json test/integration/.mocharc.json  test/integration/**/*_spec.js"
-
+    "test:integration": "NODE_ENV=test mocha --config=test/integration/.mocharc.json test/integration/.mocharc.json  test/integration/**/*_spec.js",
+    "test:unit": "NODE_ENV=test mocha --config=test/unit/.mocharc.json test/unit/**/*_spec.js"
   },
-  
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -19,7 +18,8 @@
     "@babel/cli": "^7.10.5",
     "@babel/core": "^7.10.5",
     "@babel/node": "^7.10.5",
-    "@babel/preset-env": "^7.10.4"
+    "@babel/preset-env": "^7.10.4",
+    "sinon": "^7.5.0"
   },
   "dependencies": {
     "chai": "^4.2.0",
